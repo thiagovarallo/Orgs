@@ -6,10 +6,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
  <TextView
-     android:id="@+id/nome"
+     android:id="@+id/title"
      android:layout_width="match_parent"
      android:layout_height="wrap_content"
-     android:text="Cesta de fruta"
+     tools:text="Cesta de fruta"
      app:layout_constraintEnd_toEndOf="parent"
      app:layout_constraintTop_toTopOf="parent"
      android:layout_margin="16dp"
@@ -20,14 +20,14 @@
      android:id="@+id/description"
      android:layout_width="match_parent"
      android:layout_height="wrap_content"
-     android:text="laranja, uva, maça"
+     tools:text="laranja, uva, maça"
      android:layout_marginHorizontal="16dp"
-     app:layout_constraintTop_toBottomOf="@id/nome"/>
+     app:layout_constraintTop_toBottomOf="@id/title"/>
  <TextView
      android:id="@+id/price"
      android:layout_width="match_parent"
      android:layout_height="wrap_content"
-     android:text="19,99"
+     tools:text="19,99"
      android:layout_marginHorizontal="16dp"
      app:layout_constraintTop_toBottomOf="@id/description"/>
 
