@@ -2,12 +2,12 @@ package com.example.orgs.ui.activity
 
 import android.app.Activity
 import android.os.Bundle
-import android.view.View
-import android.widget.AbsListView.RecyclerListener
-import android.widget.TextView
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.orgs.R
+import com.example.orgs.model.Produto
 import com.example.orgs.ui.reycler.adapter.ListaDeProdutoAdapter
+import java.math.BigDecimal
 
 class MainActivity : Activity() {
 
@@ -17,8 +17,25 @@ class MainActivity : Activity() {
         setContentView(R.layout.activity_main);
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView);
-        recyclerView.adapter = ListaDeProdutoAdapter()
 
+        recyclerView.adapter = ListaDeProdutoAdapter(context = this, listOf(
+            Produto(
+                name = "teste",
+                description = "teste 123",
+                price = BigDecimal("12.78")
+            ),
+            Produto(
+                name = "teste2",
+                description = "teste 12",
+                price = BigDecimal("78.78")
+            ),Produto(
+                name = "teste 38",
+                description = "teste 12",
+                price = BigDecimal("78.78")
+            ),
+        ))
+
+        recyclerView.layoutManager = LinearLayoutManager(this);
 
     }
 }
